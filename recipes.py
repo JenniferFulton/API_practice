@@ -3,7 +3,7 @@ import requests as req
 #create a function that will search spoonacular recipes and print results
 def recipes(food):
     print(f"Recipes for {food}:")
-    resp = req.get("https://api.spoonacular.com/recipes/complexSearch?query=banana&apiKey=2df2ffb1f528442cae5578169a24ec0e")
+    resp = req.get(f"https://api.spoonacular.com/recipes/complexSearch?query={food}&apiKey=2df2ffb1f528442cae5578169a24ec0e")
     print(resp.text)
 
 #get user input for recipe search
